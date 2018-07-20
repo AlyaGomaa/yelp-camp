@@ -47,8 +47,8 @@ var express= require("express"),
       formatter: null
     };
     var geocoder = NodeGeocoder(options);
-    mongoose.connect("mongodb://localhost/yelp_camp");
-    
+    mongoose.connect("mongodb://alyagomaa:alyagomaa2@ds145951.mlab.com:45951/yelpcamp321");
+ 
 //SEED THE DATABASE
 /*seedDB();
 */
