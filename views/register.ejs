@@ -1,0 +1,61 @@
+
+<% include partials/header.ejs %>
+
+<div class="container">
+    
+<h1 style="text-align:center;">Sign Up!</h1>
+    <div class="row">
+        
+        <!-- the form div-->
+        <div style="width:30%;margin:20px auto;">
+            <form method="POST" action="/register" enctype="multipart/form-data">
+                
+                <div class="form-group">
+                    First Name:<span class="required">*</span>
+                    <input class="form-control" type="text" name="firstName">
+                </div>
+                <div class="form-group">
+                    Last Name:<span class="required">*</span>
+                    <input class="form-control" type="text" name="lastName">
+                </div>
+               <div class="form-group">
+                    Profile Photo:
+                    <input class="form-control" accept="image/*" required type="file" name="avatar">
+                </div>
+                
+                
+                
+                <div class="form-group">
+                    Country:<span class="required">*</span>
+                    <input class="form-control" type="text" placeholder="San Francisco,CA" name="country">
+                </div>
+                <div class="form-group">
+                    Gender:<span class="required">*</span>
+                    <span style="margin-left:3%;">  
+                    <input  type="radio"  name="gender" value="female">Female
+                    <input  type="radio"  name="gender" value="male">Male
+                    </span>
+                </div>
+                <div class="form-group">
+                    Email Adress:<span class="required">*</span>
+                    <input class="form-control" type="text" placeholde="jhon@doe.com" name="email">
+                </div>
+                
+                <div class="form-group">
+                    Username:<span class="required">*</span>
+                    <input class="form-control" type="text"  name="username">
+                </div>
+                
+                <div class="form-group">
+                    Password:<span class="required">*</span>
+                    <input class="form-control" type="password"  name="password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Sign Up!</button>
+                </div>
+            </form>
+            <a href="/login">Already a user? Log in</a>
+        </div>
+    </div>
+</div>
+<% include partials/footer.ejs %>

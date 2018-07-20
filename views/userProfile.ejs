@@ -1,0 +1,81 @@
+<% include partials/header.ejs %>
+<div class="container">
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-4">
+                <!--Card-->
+                <div class="ui card">
+                  <div class="image">
+                    <img src="<%=user.avatar%>">
+                  </div>
+                  <div class="content">
+                    <a class="header"><%=user.firstName%> <%=user.lastName%></a>
+                    <div class="meta">
+                      <span class="date">Joined in 2018</span>
+                    </div>
+                    <div class="description">
+                      <%=user.country%>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <a>
+                      <i class="user icon"></i>
+                      <%=user.gender%>
+                    </a>
+                  </div>
+                </div>
+                <!--end of card-->
+            </div>
+            
+           <!-- user Bio-->
+            <div id="userInfo" class="col-md-8">
+                
+                <div class="ui card ">
+                    
+                  <div class="content">
+                    <div class="center aligned header">Bio</div>
+                    <div class="center aligned description">
+                      <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                    </div>
+                  </div>
+                  <div class="extra content">
+                    <div class="center aligned author">
+                      <i class="ui icon coffee"></i>
+                    </div>
+                  </div>
+                  
+                </div>
+                <!--UserInfo-->
+                 <div  class="ui card userCard">
+                      <div class="content">
+                            <div class="center aligned header">Information</div>
+                            <div class="center aligned description">
+                              <p>Email: <%=user.email%></p>
+                              <p>Username: @<%=user.username%></p>
+                              
+                            </div>
+                      </div>
+                  </div>
+                  
+                  <div  class="ui card userCard">
+                      <div class="content">
+                            <div class="center aligned header">Campgrounds</div>
+                            <div class="center aligned description">
+                              <p>
+                                <% campgrounds.forEach(function(campground){ %>
+                                  <p><a href="/campgrounds/<%=campground.id%>"><%=campground.name%></a></p>
+                                <% }) %>
+                              </p>
+                              
+                            </div>
+                      </div>
+                  </div>
+                  
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer.ejs %>

@@ -1,0 +1,21 @@
+<% include partials/header.ejs %>
+<div class="container">
+    <h1 style="text-align:center;">Edit Comment:</h1>
+    <div class="row">
+        <div style="width:30%;margin:20px auto;">
+            <form method="POST" action="/campgrounds/<%=campground._id%>/<%=comment._id%>?_method=PUT">
+                <div class="form-group">
+                    Edit Comment:
+                    <textarea class="form-control" style="height:30%;" type="text" name="comment[text]"><%= comment.text %></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block" href="/campgrounds/<%=campground._id%>">Save Changes</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<% include partials/footer.ejs %>

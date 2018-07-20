@@ -1,0 +1,123 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+.img-thumbnail img {
+    width:100%;
+}
+.img-thumbnail {
+    padding:0;
+}
+.img-thumbnail .caption-full {
+    padding:15px;
+}
+.jumbotron
+{
+     padding: 25px 30px
+    
+}
+#header1 {
+    padding:3% 0px;
+}
+#campgrounds{
+    padding-top:1.5%;
+    
+}
+/* Google Maps */
+#map {
+    margin-top:30px;
+    height:400px;
+    width: 100%;
+}
+
+/*User Profile*/
+
+#Username{
+ font-size:3em;
+    
+}
+#userAvatar{
+    height: 50%;
+    width:100%;
+    border-radius:8px; 
+    
+}
+#userStatus{
+    color:grey;
+    font-size:2em;
+}
+#userInfo .card{
+    width:100%;
+}
+
+
+/*footerr*/
+.footerr{
+    background-color:#3B4045;
+    
+    
+  /* negative value of footer height */
+ 
+}
+
+.footerr .col-lg-12{
+    padding:20px;
+    color:white;
+    text-align:center;
+}
+
+.footerr .col-lg-12 a{
+    
+    color:#A5A7A8;
+}
+
+.footerr .col-lg-12 a:hover{
+    text-decoration: underline; 
+    
+}
+.required{
+    color:red;
+    font-size:17px;
+    
+}
+
+.moreInfo{
+    
+    color:black;
+}
+.hiddenNavbar{
+    display:table;
+    margin-top:10px;
+}
+.hiddenNavbar ul li
+{
+    display:table-cell;
+   
+}
+.hiddenNavbar ul li a
+{
+     color:grey;
+    vertical-align:middle;
+    text-align:center;
+    padding:10px;
+    
+}
+#hiddenNavbar ul li a img
+{
+    vertical-align:middle;
+    text-align:center;
+}
+
+.navbar-toggler{
+ border:hidden;  
+ 
+}
+.navbar-toggler:hover {
+ cursor:auto;
+}

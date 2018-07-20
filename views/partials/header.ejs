@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <title>YelpCamp!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="HandheldFriendly" content="true">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+        <link href="/stylesheets/main.css" rel="stylesheet"></link>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.css" rel="stylesheet" type="text/css">
+
+    </head>
+    
+    <body >
+       
+<nav class="container navbar navbar-expand-sm navbar-light bg-faded">
+<!--<div class="navbar-toggler" data-toggle="collapse" data-target="#nav-content" aria-controls="nav-content"  aria-expanded="false"  >
+<span class="navbar-toggler-icon"></span>-->
+<!--elmsh bayen-->    
+<div class="navbar-toggler" >
+  <%  if(!currentUser){ %>
+    
+    <div class="hiddenNavbar">
+      <ul>
+        <li><a  href="/login">Login</a></li>
+        <li><a  href="/register">Sign Up</a></li>
+      </ul>
+    </div>
+    
+  <%  }else{ %>
+  
+  <div class="hiddenNavbar">
+    <ul style="font-size:12px;">
+      <li><a class="nav-link" href="/users/<%=currentUser.id%>" >Signed In As <span style="color:rgba(0, 98, 204,0.7);"><%=currentUser.username%></span></a></li>
+      <li><a class="nav-link" href="/logout">Log Out</a></li>
+    </ul>
+  </div>
+    
+   <% } %>
+<!--elmsh bayen-->
+
+
+
+</div>
+
+
+
+<!-- Brand -->
+<a class="navbar-brand" href="/campgrounds"><i class="ui quote left icon"></i> YELPCAMP!</a>
+
+<!-- Links -->
+<div class="collapse navbar-collapse justify-content-end" id="nav-content">   
+<ul class="navbar-nav">
+    
+  <%  if(!currentUser){ %>
+    
+    <li class="nav-item">
+    <a class="nav-link" href="/login">Login</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/register">Sign Up</a>
+    </li>
+    
+  <%  }else{ %>
+    <li class="nav-item">
+    <a class="nav-link" href="/users/<%=currentUser.id%>" >Signed In As <span style="color:rgba(0, 98, 204,0.7);"><%=currentUser.username%></span></a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="/logout">Log Out</a>
+    </li>
+    
+   <% } %>
+
+
+</ul>
+</nav>
+<!--WARNINGGSSSS-->
+<% if(error && error.length>0){ %>
+  <div class="container ui negative message">
+      <div class="header">
+        <%=error%>
+      </div>
+  </div>
+<% } %>
+
+<% if(success && success.length>0){ %>
+
+  <div class="container ui success message">
+    
+    <div class="header">
+      <%=success%>
+    </div>
+    <!--<p>You may now log-in with the username you have chosen</p>-->
+  </div>
+  
+<% } %>
+
+
